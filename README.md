@@ -1,1 +1,1 @@
-# 2025-03-12_branded-quarto
+# Brand your Quarto Projects with brand.yml
