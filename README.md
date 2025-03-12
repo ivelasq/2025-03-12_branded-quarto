@@ -1,5 +1,7 @@
 # Brand your Quarto Projects with brand.yml
 
+![](images/title.png)
+
 ## Resources
 
 * [brand.yml documentation site](https://posit-dev.github.io/brand-yml/)
