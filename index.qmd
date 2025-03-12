@@ -122,7 +122,7 @@ I'm going to start with a very real story.
 :::
 
 ::: notes
-At posit::conf(2024), David Keyes gave a talk about Quarto’s default styles. The defaults work well, but his company focuses on creating reports that are not just functional but also visually appealing.
+At posit::conf(2024), David Keyes gave a talk about Quarto’s default styles. The defaults work well, but his company focuses on creating reports that are not just functional but also more effective, more accessible by visually appealing.
 :::
 
 ## {.title background-gradient="linear-gradient(to bottom, #DFB12F, #805280)"}
@@ -134,7 +134,7 @@ At posit::conf(2024), David Keyes gave a talk about Quarto’s default styles. T
 :::
 
 ::: notes
-Does this actually matter? The answer is yes. David discusses the aesthetic usability effect—the idea that people perceive visually appealing designs as more intuitive and easier to use. Making things look better isn’t just about style; it helps ensure your work is more effective in reaching your audience.
+Does this actually matter? The answer is yes. David discusses the aesthetic usability effect—the idea that people perceive visually appealing designs as more intuitive and easier to use. Making things look better isn’t just about style; it helps ensure your work is more effective in reaching your audience. So, it is in your best interest to do this.
 :::
 
 ##
@@ -146,7 +146,7 @@ Does this actually matter? The answer is yes. David discusses the aesthetic usab
 :::
 
 ::: notes
-At RStudio::conf(2019), Heather and Jacqueline Nolis gave a talk about prototyping a Shiny app to present to stakeholders and gain their buy-in. Their goal wasn’t just to deliver information in the right format—like a web app—but also to present it in a way stakeholders would find familiar and engaging. They shared that they spent an extra day theming the app to match T-Mobile’s brand style, which turned out to be a crucial step in securing stakeholder approval.
+At RStudio::conf(2019), Heather and Jacqueline Nolis gave a talk about prototyping a Shiny app to present to stakeholders and gain their buy-in. Their goal wasn’t just to deliver information in the right format—like a web app—but also to present it in a way stakeholders would find familiar and engaging. They shared that they spent an extra day theming the app to match T-Mobile’s brand style, which turned out to be a crucial step in securing stakeholder approval. It made a difference.
 :::
 
 ## 
@@ -265,28 +265,69 @@ typography:
 You might be wondering, What is YAML? YAML stands for "YAML Ain't Markup Language." It's a simple data serialization format that uses key-value pairs to represent data in a readable way. Let’s take a look at a file—the _brand.yml file. This would be in your project and typically include the elements mentioned earlier. Everything is optional, so you can add as much or as little as needed. Whether you want a simple or more complex file, it's all up to you.
 :::
 
-## Metadata
+## Metadata {auto-animate=true}
 
 ```{.yaml}
-meta: 
-  name: Example Company
-  link: 
-    github: https://github.com/example-company
+meta:
+  name: Acme Corporation
+  link: https://www.acmecorp.com
 ```
 
 ::: notes
-The first thing to include in the _brand.yml file is your key identity information—such as the company name, links to your brand guidelines, and more. Under the meta section, you’ll find the company name and a link to your website. You can also include a range of names or social media handles. Quarto doesn’t do anything with the meta values—they’re just for reference.
+The first thing to include in the _brand.yml file is your key identity information—such as the company name, links to your brand guidelines, and more. Under the meta section, you’ll find the company name and a link to your website. Here's a minimal example of your metadata. Quarto doesn’t do anything with the meta values—they’re just for reference.
 :::
 
 ::: aside
 [brand.yml metadata documentation](https://posit-dev.github.io/brand-yml/brand/meta.html)
 :::
 
-## Logo
+## Metadata {auto-animate=true}
+
+```{.yaml code-line-numbers="3-5"}
+meta:
+  name: Acme Corporation
+  link: 
+    home: https://www.acmecorp.com
+    github: https://github.com/acmecorp
+```
+
+::: notes
+You can also include a range of names or social media handles. 
+:::
+
+::: aside
+[brand.yml metadata documentation](https://posit-dev.github.io/brand-yml/brand/meta.html)
+:::
+
+## Metadata {auto-animate=true}
+
+```{.yaml code-line-numbers="|2,3,4"}
+meta:
+  name:
+    full: Acme Corporation International
+    short: Acme
+  link:
+    home: https://www.acmecorp.com
+    docs: https://docs.acmecorp.com
+    github: https://github.com/acmecorp
+    bluesky: https://bsky.app/profile/acmecorp.bsky.social
+    twitter: https://twitter.com/acmecorp
+    linkedin: https://www.linkedin.com/company/acmecorp
+    facebook: https://www.facebook.com/acmecorp
+  description: |
+    Acme Corporation is a leading provider of innovative solutions for cartoon
+    characters worldwide.
+  founded: 1952
+```
+
+::: aside
+[brand.yml metadata documentation](https://posit-dev.github.io/brand-yml/brand/meta.html)
+:::
+
+## Logo {auto-animate=true}
 
 ```{.yaml}
-logo: 
-  medium: logos/logo.png
+logo: logo.png
 ```
 
 ::: notes
@@ -297,12 +338,9 @@ Use the logo field to specify your brand’s logo at various sizes. You can prov
 [brand.yml logo documentation](https://posit-dev.github.io/brand-yml/brand/logo.html)
 :::
 
+## Logo {auto-animate=true}
 
-## Logo
-
-### Multi-size configuration
-
-```{.yaml}
+```{.yaml code-line-numbers="|2|3|4"}
 logo:
   small: logos/icon.png
   medium: logos/header-logo.png
@@ -313,11 +351,16 @@ logo:
 [brand.yml logo documentation](https://posit-dev.github.io/brand-yml/brand/logo.html)
 :::
 
-## Logo
+::: notes
+The small attribute defines the logo used for small display contexts, such as favicons or mobile app icons. The medium attribute specifies the logo for medium-sized display contexts, typically used in website headers or navigation bars. The large attribute defines the logo for large display contexts, such as title slides or marketing materials.
+:::
+
+
+## Logo {auto-animate=true}
 
 ### Light/dark variants
 
-```{.yaml}
+```{.yaml code-line-numbers="|4|5"}
 logo:
   small: logos/icon.png
   medium:
@@ -330,7 +373,71 @@ logo:
 [brand.yml logo documentation](https://posit-dev.github.io/brand-yml/brand/logo.html)
 :::
 
-## Colors
+::: notes
+You can specify different logos for light and dark backgrounds by giving the small, medium, and large attributes a nested mapping with light and dark child elements. “light” means for use on light background (or in a light color mode), and “dark” means for use on dark background (or in a dark color mode).
+:::
+
+## Logo {auto-animate=true}
+
+### Configuration with Named Resources
+
+```{.yaml}
+logo:
+  images:
+    icon: logos/icon.png
+    header: logos/header-logo.png
+    header-white: logos/header-logo-white.png
+    full: logos/full-logo.svg
+  small: icon
+  medium:
+    light: header
+    dark: header-white
+  large: full
+```
+
+::: aside
+[brand.yml logo documentation](https://posit-dev.github.io/brand-yml/brand/logo.html)
+:::
+
+::: notes
+Use images as a nested mapping to define multiple logo resources with meaningful names. Then, you can directly reference these resources by name in the small, medium, and large attributes.
+:::
+
+## Logo {auto-animate=true}
+
+### With alternative text
+
+```{.yaml}
+logo:
+  images:
+    icon:
+      path: logos/icon.png
+      alt: "Company icon with abstract shapes"
+    header:
+      path: logos/header-logo.png
+      alt: "Company name with logo"
+    header-white:
+      path: logos/header-logo-white.png
+      alt: "Company name with logo in white"
+    full:
+      path: logos/full-logo.svg
+      alt: "Full company logo with tagline"
+  small: icon
+  medium:
+    light: header
+    dark: header-white
+  large: full
+```
+
+::: aside
+[brand.yml logo documentation](https://posit-dev.github.io/brand-yml/brand/logo.html)
+:::
+
+::: notes
+Logo images can have associated alternative text for accessibility purposes. This can be specified as an alt property in the image object as the alt text is directly associated with each image.
+:::
+
+## Colors {auto-animate=true}
 
 ```{.yaml}
 color:
@@ -340,11 +447,6 @@ color:
     neutral: "#F9F7F1" 
     red: "#BA274A"
     violet: "#4D6CFA"
-  background: neutral
-  foreground: black
-  primary: blue
-  secondary: violet
-  danger: red
 ```
 
 ::: aside
@@ -352,47 +454,241 @@ color:
 :::
 
 ::: notes
-Next, let's define your brand’s colors in structured YAML. Use the color field to set your brand’s color palette, mapping each color to its semantic role. First, load your colors using their hex codes. Then, define the palette with special names, so you can refer to them easily. Assign colors to specific properties, and Quarto will apply them in the output. You can also reuse these colors throughout the _brand.yml file, just like with typography.
+Next, let's define your brand’s colors in structured YAML. The color section in _brand.yml consists of two main parts, palette, aset of named colors specific to the brand, and theme colors, semantic color assignments for various UI elements. Use the color field to set your brand’s color palette, mapping each color to its semantic role. Load your colors mapped to their hex codes (this is recommended). Define the palette with special names, so you can refer to them easily. 
 :::
 
-## Typography
+## Colors {auto-animate=true}
+
+```{.yaml}
+color:
+  . . .
+  
+  foreground: black # Main text color
+  background: white # Main background color
+  primary: blue # Primary accent color, used for hyperlinks, etc.
+  secondary: "#707073" # Secondary accent color, often used for lighter text
+  tertiary: "#C2C2C4" # Tertiary accent color
+  success: green # Color used for positive or successful actions
+  info: teal # Color used for neutral or informational actions
+  warning: orange # Color used for warning or cautionary actions
+  danger: burgundy # Color used for errors, dangerous actions
+  light: white # Bright color, used as a high-contrast foreground color
+  dark: "#404041" # Dark color, used as a high-contrast foreground color
+```
+
+::: aside
+[brand.yml color documentation](https://posit-dev.github.io/brand-yml/brand/color.html)
+:::
+
+::: notes
+Then, map the brand colors to theme colors in the color section. Assign colors to specific properties, and Quarto will apply them in the output. You can also reuse these colors throughout the _brand.yml file, like in the typography section.
+:::
+
+## Colors {auto-animate=true}
+
+```{.yaml code-line-numbers="|5,13"}
+color:
+  palette:
+    white: "#FFFFFF"
+    black: "#151515"
+    blue: "#447099"
+    orange: "#EE6331"
+    green: "#72994E"
+    teal: "#419599"
+    burgundy: "#9A4665"
+
+  foreground: black
+  background: white
+  primary: blue
+  secondary: "#707073"
+  tertiary: "#C2C2C4"
+  success: green
+  info: teal
+  warning: orange
+  danger: burgundy
+  light: white
+  dark: "#404041"
+```
+
+::: aside
+[brand.yml color documentation](https://posit-dev.github.io/brand-yml/brand/color.html)
+:::
+
+::: notes
+This would be the full section with both the palette and the themes. Colors defined in the palette can be referenced by name in other parts of the color section.
+:::
+
+## Colors {auto-animate=true}
+
+```{.yaml}
+color:
+  foreground: "#151515"
+  background: "#FFFFFF"
+  primary: "#447099"
+  secondary: "#707073"
+  tertiary: "#C2C2C4"
+  success: "#72994E"
+  info: "#419599"
+  warning: "#EE6331"
+  danger: "#9A4665"
+  light: "#FFFFFF"
+  dark: "#404041"
+```
+
+::: aside
+[brand.yml color documentation](https://posit-dev.github.io/brand-yml/brand/color.html)
+:::
+
+::: notes
+Of course, you can also skip creating a brand color palette and pick theme colors directly.
+:::
+
+## Typography {auto-animate=true}
 
 ```{.yaml}
 typography:
-  fonts:
-    - family: Nunito Sans
-      source: google
-    - family: Montserrat
-      source: google
-    - family: Fira Code
-      source: google
+  base: Open Sans
+  headings: Roboto Slab
+  monospace: Fira Code
 ```
 
 ::: notes
-The typography element lets you specify fonts and their styles. Use the fonts field to list the fonts for your brand—this can be simple or more detailed. You can then refer to these fonts by family in other typography options. You can use fonts from public sources like Google Fonts, or list custom font files using a relative path or URL. One thoughtful feature: Google Fonts can add tracking, but there’s a GDPR-compliant alternative, Bunny Fonts, if you prefer that.
+The typography element lets you specify fonts and their styles. Use the fonts field to list the fonts for your brand—this can be simple or more detailed. First, specify the fonts used by your brand. You can then refer to these fonts by family in other typography options and define the fonts and styles used by different typographic elements. You can use fonts from public sources like Google Fonts, or list custom font files using a relative path or URL. One thoughtful feature: Google Fonts can add tracking, but there’s a GDPR-compliant alternative, Bunny Fonts, if you prefer that. At its most minimal, you can directly set the font families for base text, headings, and monospace text.
 :::
 
 ::: aside
 [brand.yml typography documentation](https://posit-dev.github.io/brand-yml/brand/typography.html)
 :::
 
-## Typography
+## Typography {auto-animate=true}
 
 ```{.yaml}
-  base: Nunito Sans
+typography:
+  base:
+    family: Open Sans
   headings:
-    family: Montserrat
-    weight: 700
-    color: primary
-  monospace: Fira Code
-  link:
-    color: danger
-    decoration: underline
+    family: Roboto Slab
+  monospace:
+    family: Fira Code
+```
+
+::: aside
+[brand.yml typography documentation](https://posit-dev.github.io/brand-yml/brand/typography.html)
+:::
+
+::: notes
+This saves a bit of typing and is equivalent to the following.
+:::
+
+## Typography {auto-animate=true}
+
+```{.yaml}
+typography:
+  fonts:
+    - family: Open Sans
+      source: google
+    - family: Roboto Slab
+      source: google
+    - family: Fira Code
+      source: google
+```
+
+::: aside
+[brand.yml typography documentation](https://posit-dev.github.io/brand-yml/brand/typography.html)
+:::
+
+::: notes
+Currently, Quarto and Shiny assume that a font family mentioned in the typography section is available on the user’s system. To use fonts from Google Fonts or Bunny Fonts (a GDPR-compliant Google Fonts replacement), define the font sources in fonts. 
+:::
+
+## Typography {auto-animate=true}
+
+```{.yaml code-line-numbers="|4,6,8"}
+typography:
+  fonts:
+    - family: Open Sans
+      source: bunny
+    - family: Roboto Slab
+      source: bunny
+    - family: Fira Code
+      source: bunny
+```
+
+::: aside
+[brand.yml typography documentation](https://posit-dev.github.io/brand-yml/brand/typography.html)
+:::
+
+## Typography {auto-animate=true}
+
+```{.yaml code-line-numbers="|3-9"}
+typography:
+  fonts:
+    # Local files
+    - family: Open Sans
+      source: file
+      files:
+        - path: fonts/open-sans/OpenSans-Variable.ttf
+        - path: fonts/open-sans/OpenSans-Variable-Italic.ttf
+          style: italic
+    # Online files
+    - family: Closed Sans
+      source: file
+      files:
+        - path: https://example.com/Closed-Sans-Bold.woff2
+          weight: bold
+        - path: https://example.com/Closed-Sans-Italic.woff2
+          style: italic
+```
+
+::: aside
+[brand.yml typography documentation](https://posit-dev.github.io/brand-yml/brand/typography.html)
+:::
+
+::: notes
+You can also add local fonts, so those not from the internet. Local fonts are specified using source: file and typically consist of multiple files, each representing a different weight and style. To use local fonts, list each file under the files section, providing a path attribute and optionally specifying the weight and style for each file.
+:::
+
+## Typography {auto-animate=true}
+
+```{.yaml code-line-numbers="|9-12"}
+typography:
+  fonts:
+    - family: Open Sans
+      source: google
+    - family: Roboto Slab
+      source: google
+    - family: Fira Code
+      source: google
+  base: Open Sans #  Font and appearance settings for the base (body) text
+  headings: Roboto Slab #  Font and appearance settings for heading text
+  monospace: Fira Code # Font and appearance settings for monospaced text 
+  link: Fira Code   #Font and appearance settings for hyperlink text
 ```
 
 ::: notes
-You can then specify how the fonts are applied and styled. The base and headings options control the style for the main text and headings, respectively.
+You can then specify how the fonts are applied and styled.
 :::
+
+::: aside
+[brand.yml typography documentation](https://posit-dev.github.io/brand-yml/brand/typography.html)
+:::
+
+## Typography {auto-animate=true}
+
+```{.yaml code-line-numbers="|4,5|8"}
+. . .
+  base:
+    family: Open Sans
+    line-height: 1.25
+    size: 1rem
+  headings:
+    family: Roboto Slab
+    color: primary
+    weight: 600
+  monospace:
+    family: Fira Code
+    size: 0.9em
+```
 
 ::: aside
 [brand.yml typography documentation](https://posit-dev.github.io/brand-yml/brand/typography.html)
@@ -504,7 +800,7 @@ brand: false
 
 Keep in mind that `_brand.yml` always takes *lowest* priority in styles.
 
-```{.yaml}
+```{.yaml filename="_quarto.yml"}
 theme:
   - brand        # theming derived from `_brand.yml`
   - cosmo        # a predefined bootswatch theme
@@ -519,7 +815,7 @@ Defined themes will override the brand settings. As a result, values set by the 
 
 Keep in mind that `_brand.yml` always takes *lowest* priority in styles.
 
-```{.yaml}
+```{.yaml filename="_quarto.yml"}
 theme:
   - cosmo        # a predefined bootswatch theme
   - brand        # theming derived from `_brand.yml`
