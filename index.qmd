@@ -101,7 +101,7 @@ You may notice I'm using the default Quarto theme—that's on purpose! We'll com
 ![](images/quarto-announce.png){width=80% fig-align="center"}
 
 ::: notes
-I'm going to start with a true story. Quarto is a scientific technical publishing system. But it's not so new anymore, it was announced July 28, 2022 at rstudio conf. If you are here, I hope you have some familiarity with Quarto. Essentially, executable code and text to create a variety of docs (websites, presentations, books) from a single source. It's inherently multilingual, supporting R, Python, Julia, Observable, and designed to handle more in the future. And it aims to have a consistent syntax across tools (vs R Markdown's bookdown, xaringan, etc.). Back to the story, Quarto was announced and not quite two months later...
+I'm going to start with a true story. Quarto is a scientific technical publishing system. But it's not so new anymore, it was announced July 28, 2022 at rstudio conf. If you are here, I hope you have some familiarity with Quarto. Essentially, executable code and text to create a variety of docs (websites, presentations, books) from a single source. It's inherently multilingual, supporting R, Python, Julia, Observable, and designed to handle more in the future. And it aims to have a consistent syntax across tools (vs R Markdown's bookdown, xaringan, etc.). Back to the story, Quarto was announced and not quite two months later, on September 19th...
 :::
 
 ## Background
