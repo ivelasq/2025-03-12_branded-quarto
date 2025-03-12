@@ -1,24 +1,553 @@
 ---
-title: "Brand your Quarto Projects with"
-format: revealjs
-editor: visual
+format: 
+  revealjs:
+    include-in-header: 
+      text: |
+        <style>
+        .center-xy {
+          margin: 0;
+          position: absolute;
+          top: 10%;
+          left: 10%;
+          -ms-transform: translateY(-50%), translateX(-50%);
+          transform: translateY(-50%), translateX(-50%);
+        }
+        </style>
+    filters:
+      - fontawesome
+editor: source
+highlight-style: a11y
+brand: false
 ---
 
-## Quarto
+##  {.title background-color="#cbc3e3"}
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+<br>
+[Brand your Quarto projects with]{style="font-size: 1.5em; font-weight: bold;"}
 
-## Bullets
+```{=html}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Berkshire+Swash&family=Cabin:ital,wght@0,400..700;1,400..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Germania+One&family=Lobster&family=Pacifico&family=Rubik:ital,wght@0,300..900;1,300..900&family=Rye&display=swap" rel="stylesheet" />
 
-When you click the **Render** button a document will be generated that includes:
 
--   Content authored with markdown
--   Output from executable code
+<style type="text/css">
+body.texturizer {
+  margin: 3em;
+}
 
-## Code
+div.ts {
+  font-size:2.5em;
+  line-height: normal;
+  word-spacing:0.5em;
+}
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+div.ts .tw .tc,
+div.ts .tw,
+div.ts {
+  display: inline-block;
+}
 
-```{r}
-1 + 1
+div.ts .tw {
+  white-space: pre;
+  margin-left: -0.5em;
+  margin-right: .2em;
+}
+
+div.ts .rr {
+  -ms-transform: rotate(1.5deg);
+  -webkit-transform: rotate(1.5deg);
+  transform: rotate(1.5deg);
+}
+
+div.ts .rl {
+  -ms-transform: rotate(-1.5deg);
+  -webkit-transform: rotate(-1.5deg);
+  transform: rotate(-1.5deg);
+}
+
+</style>
+<div id="ransomizer"><div class="ts"><div class="tw"><div class="tc rl" style="background-color:#717732;color:#ffffff;font-family:'Rubik', serif; font-size:90%; background-image:url(https://i.imgur.com/IcV8Q3G.png) ; background-position: left center; box-shadow:1px -1px 2px #333; line-height:75%; margin:0.1em; padding:0.2em; vertical-align:0.1em; ">b</div><div class="tc rr" style="background-color:#f15770;color:#000000;font-family:'Germania One', serif; font-size:110%; font-weight:bold; font-style:italic; box-shadow:1px -1px 2px #333; text-transform:lowercase; line-height:100%; margin:0.1em; padding:0.3em; vertical-align:-0.1em; ">r</div><div class="tc rl" style="background-color:#ce1126;color:#ffffff;font-family:'Rubik', serif; font-size:110%; font-weight:bolder; background-image:url(https://i.imgur.com/pwrAKPo.png) ; background-position: right top; font-style:italic; text-transform:lowercase; line-height:100%; margin:0.1em; padding:0.3em; vertical-align:0.1em; ">a</div><div class="tc rl" style="background-color:#f9aa51;color:#000000;font-family:'Rubik', serif; font-size:90%; font-style:italic; box-shadow:-1px -1px 2px #333; text-transform:lowercase; line-height:100%; margin:0.1em; padding:0.3em; vertical-align:baseline; ">n</div><div class="tc rr" style="background-color:#0c8489;color:#fbffff;font-family:'Cabin', serif; font-size:100%; background-image:url(https://i.imgur.com/IcV8Q3G.png) ; background-position: left bottom; box-shadow:1px 1px 2px #333; text-transform:uppercase; line-height:125%; margin:0.1em; padding:0.3em; vertical-align:baseline; ">d</div><div class="tc " style="background-color:#717732;color:#ffffff;font-family:'Germania One', serif; font-size:110%; font-weight:bolder; background-image:url(https://i.imgur.com/pwrAKPo.png) ; background-position: center center; box-shadow:1px -1px 2px #333; text-transform:uppercase; line-height:125%; margin:0.1em; padding:0.3em; vertical-align:baseline; ">.</div><div class="tc rl" style="background-color:#717732;color:#ffffff;font-family:'Cabin', serif; font-size:90%; font-weight:bold; background-image:url(https://i.imgur.com/pwrAKPo.png) ; background-position: left center; font-style:italic; box-shadow:1px -1px 2px #333; text-transform:uppercase; line-height:125%; margin:0.1em; padding:0.1em; vertical-align:0.1em; ">y</div><div class="tc " style="background-color:#d2a567;color:#000000;font-family:'Rubik', serif; font-size:100%; font-style:italic; line-height:75%; margin:0.1em; padding:0.3em; vertical-align:-0.1em; ">m</div><div class="tc rl" style="background-color:#f9aa51;color:#000000;font-family:'Crimson Pro', serif; font-size:100%; font-weight:bold; font-style:italic; box-shadow:-1px 1px 2px #333; text-transform:lowercase; line-height:100%; margin:0.1em; padding:0.1em; vertical-align:0.1em; ">l</div></div>
+</div></div>
 ```
+<br>
+
+[R-Ladies Philly]{style="font-size: 1.2em; font-weight: bold;"}
+
+[March 12, 2025 @ 11am CT]{style="font-size: 1.2em;"}
+
+## Introduction
+
+<center>
+
+<img src="images/profile.jpg" style="border-radius: 50%;" width="250px"/>
+
+[{{< fa brands github >}} ivelasq](https://github.com/ivelasq)
+
+[{{< fa brands bluesky >}} ivelasq3](https://twitter.com/ivelasq3)
+
+[{{< fa brands mastodon >}} ivelasq3](https://fosstodon.org/@ivelasq3)
+
+[{{< fa link >}} ivelasq.rbind.io](https://ivelasq.rbind.io)
+
+</center>
+
+::: notes
+You may notice I'm using the default Quarto theme—that's on purpose! We'll come back to that later. brand.yml's tagline is unified branding with a simple YAML file. The idea is simple: every company has brand guidelines, and brand.yml helps translate them into a YAML file that can style slides, websites, Shiny apps, and more. This approach ensures that branding is consistent across different projects. The goal is to structure the YAML file in a way that makes sense both to those referencing it for brand consistency and to developers using it to theme their work.
+:::
+
+## Background
+
+![](images/quarto-announce.png){width=80% fig-align="center"}
+
+::: notes
+I'm going to start with a very real story.
+:::
+
+## Background
+
+![](images/fake-text1.png){width=80% fig-align="center"}
+
+## Background
+
+![](images/fake-text2.png){width=80% fig-align="center"}
+
+##
+
+![](images/report-design.png){width=80% fig-align="center"}
+
+::: aside
+[David Keyes | Report Design in R: Small Tweaks that Make a Big Difference | posit::conf(2024)](https://www.youtube.com/watch?v=bp1SMhLoz_M)
+:::
+
+::: notes
+At posit::conf(2024), David Keyes gave a talk about Quarto’s default styles. The defaults work well, but his company focuses on creating reports that are not just functional but also visually appealing.
+:::
+
+## {.title background-gradient="linear-gradient(to bottom, #DFB12F, #805280)"}
+
+::: {.center-xy}
+
+[Aesthetic<br>Usability<br>Effect]{style="font-size: 3em; font-weight: bold; color: white;"}
+
+:::
+
+::: notes
+Does this actually matter? The answer is yes. David discusses the aesthetic usability effect—the idea that people perceive visually appealing designs as more intuitive and easier to use. Making things look better isn’t just about style; it helps ensure your work is more effective in reaching your audience.
+:::
+
+##
+
+![](images/push-to-prod.png){width=80% fig-align="center"}
+
+::: aside
+[Heather & Jacqueline Nolis | Push straight to prod: API development with R and Tensorflow | rstudio::conf(2019)](https://www.youtube.com/watch?v=RndK5em1dHo)
+:::
+
+::: notes
+At RStudio::conf(2019), Heather and Jacqueline Nolis gave a talk about prototyping a Shiny app to present to stakeholders and gain their buy-in. Their goal wasn’t just to deliver information in the right format—like a web app—but also to present it in a way stakeholders would find familiar and engaging. They shared that they spent an extra day theming the app to match T-Mobile’s brand style, which turned out to be a crucial step in securing stakeholder approval.
+:::
+
+## 
+
+![](images/data-viz.png){width=80% fig-align="center"}
+
+. . .
+
+```r
+library("ggplot2")
+library("ggthemes")
+
+ggplot(mtcars) +
+  geom_point(aes(x = wt, y = mpg, colour = factor(gear))) +
+  facet_wrap( ~ am) +
+  scale_y_continuous(position = "right") +
+  theme_economist() +
+  scale_colour_economist()
+```
+
+::: aside
+[Source](https://medium.economist.com/charting-new-territory-7f5afb293270)
+:::
+
+::: notes
+This isn’t a new idea—it's why marketing teams invest time and resources into developing brand guidelines. But branding isn’t just for marketers; developers also need to consider it to make their work more effective and engaging. Take data visualizations, for example. When you see a certain style, you instantly recognize it as The Economist’s. Their design is so distinct and standardized that it even has its own ggplot2 theme.
+:::
+
+## 
+
+![](images/fake-text3.png){width=80% fig-align="center"}
+
+::: notes
+That’s why the release of brand.yml was so exciting—it provided another option for people looking to create beautifully themed documents with ease.
+:::
+
+##
+<br>
+<br>
+![](images/brand-yml.png){fig-align="center"}
+
+::: aside
+[posit-dev.github.io/brand-yml](https://posit-dev.github.io/brand-yml)
+:::
+
+## brand.yml
+
+1. Define branding in a single `_brand.yml` file.
+2. Instantly apply branding across Quarto documents, Shiny apps, and more.
+
+::: notes
+You create a single YAML file that Quarto and Shiny will pick up, ensuring consistent branding across your outputs. The idea is to take your brand guidelines and translate them into structured YAML. Do you need CSS? Maybe. brand.yml can handle both, offering "Good Enough" theming. It might not match your company’s guidelines perfectly, but it will get you very close. To specify a brand, simply create a _brand.yml file in the root directory of your project (next to _quarto.yml). Quarto will automatically detect the _brand.yml file and apply the branding to all supported document formats in the project.
+:::
+
+## Where does it work?
+
+* [Quarto](https://quarto.org/) v1.6
+  * `html`, `dashboard`, `revealjs`, `typst`
+* [Shiny for Python](https://shiny.posit.co/py/) v1.2
+* R Markdown (with [bslib v0.9.0](https://shiny.posit.co/blog/posts/bslib-0.9.0/))
+* Shiny for R (with [bslib v0.9.0](https://shiny.posit.co/blog/posts/bslib-0.9.0/))
+
+## brand.yml elements
+
+* `meta`: Identifying information, name of the company, URLs, etc.
+* `logo`: Files or links to the brand’s logos.
+* `color`: Colors in the brand's color palette. 
+* `typography`: Fonts for different elements. 
+* `defaults`: Additional context-specific settings.
+
+## `_brand.yml` structure
+
+```{.yaml code-line-numbers="1|6|9|22" filename="_brand.yml"}
+meta: 
+  name: Example Company
+  link: 
+    github: https://github.com/example-company
+
+logo: 
+  medium: logos/logo.png
+
+color:
+  palette:
+    black: "#1C2826"
+    blue: "#0C0A3E" 
+    neutral: "#F9F7F1" 
+    red: "#BA274A"
+    violet: "#4D6CFA"
+  background: neutral
+  foreground: black
+  primary: blue
+  secondary: violet
+  danger: red
+
+typography:
+  fonts:
+    - family: Nunito Sans
+      source: google
+    - family: Montserrat
+      source: google
+    - family: Fira Code
+      source: google
+
+  base: Nunito Sans
+  headings:
+    family: Montserrat
+    weight: 700
+    color: primary
+  monospace: Fira Code
+  link:
+    color: danger
+    decoration: underline
+```
+
+::: notes
+You might be wondering, What is YAML? YAML stands for "YAML Ain't Markup Language." It's a simple data serialization format that uses key-value pairs to represent data in a readable way. Let’s take a look at a file—the _brand.yml file. This would be in your project and typically include the elements mentioned earlier. Everything is optional, so you can add as much or as little as needed. Whether you want a simple or more complex file, it's all up to you.
+:::
+
+## Metadata
+
+```{.yaml}
+meta: 
+  name: Example Company
+  link: 
+    github: https://github.com/example-company
+```
+
+::: notes
+The first thing to include in the _brand.yml file is your key identity information—such as the company name, links to your brand guidelines, and more. Under the meta section, you’ll find the company name and a link to your website. You can also include a range of names or social media handles. Quarto doesn’t do anything with the meta values—they’re just for reference.
+:::
+
+::: aside
+[brand.yml metadata documentation](https://posit-dev.github.io/brand-yml/brand/meta.html)
+:::
+
+## Logo
+
+```{.yaml}
+logo: 
+  medium: logos/logo.png
+```
+
+::: notes
+Use the logo field to specify your brand’s logo at various sizes. You can provide a local file path (relative to the location of _brand.yml) or a URL. This flexible system supports different logo sizes, light/dark variants, and the ability to store multiple image resources for various use cases.
+:::
+
+::: aside
+[brand.yml logo documentation](https://posit-dev.github.io/brand-yml/brand/logo.html)
+:::
+
+
+## Logo
+
+### Multi-size configuration
+
+```{.yaml}
+logo:
+  small: logos/icon.png
+  medium: logos/header-logo.png
+  large: logos/full-logo.svg
+```
+
+::: aside
+[brand.yml logo documentation](https://posit-dev.github.io/brand-yml/brand/logo.html)
+:::
+
+## Logo
+
+### Light/dark variants
+
+```{.yaml}
+logo:
+  small: logos/icon.png
+  medium:
+    light: logos/header-logo.png
+    dark: logos/header-logo-white.png
+  large: logos/full-logo.svg
+```
+
+::: aside
+[brand.yml logo documentation](https://posit-dev.github.io/brand-yml/brand/logo.html)
+:::
+
+## Colors
+
+```{.yaml}
+color:
+  palette:
+    black: "#1C2826"
+    blue: "#0C0A3E" 
+    neutral: "#F9F7F1" 
+    red: "#BA274A"
+    violet: "#4D6CFA"
+  background: neutral
+  foreground: black
+  primary: blue
+  secondary: violet
+  danger: red
+```
+
+::: aside
+[brand.yml color documentation](https://posit-dev.github.io/brand-yml/brand/color.html)
+:::
+
+::: notes
+Next, let's define your brand’s colors in structured YAML. Use the color field to set your brand’s color palette, mapping each color to its semantic role. First, load your colors using their hex codes. Then, define the palette with special names, so you can refer to them easily. Assign colors to specific properties, and Quarto will apply them in the output. You can also reuse these colors throughout the _brand.yml file, just like with typography.
+:::
+
+## Typography
+
+```{.yaml}
+typography:
+  fonts:
+    - family: Nunito Sans
+      source: google
+    - family: Montserrat
+      source: google
+    - family: Fira Code
+      source: google
+```
+
+::: notes
+The typography element lets you specify fonts and their styles. Use the fonts field to list the fonts for your brand—this can be simple or more detailed. You can then refer to these fonts by family in other typography options. You can use fonts from public sources like Google Fonts, or list custom font files using a relative path or URL. One thoughtful feature: Google Fonts can add tracking, but there’s a GDPR-compliant alternative, Bunny Fonts, if you prefer that.
+:::
+
+::: aside
+[brand.yml typography documentation](https://posit-dev.github.io/brand-yml/brand/typography.html)
+:::
+
+## Typography
+
+```{.yaml}
+  base: Nunito Sans
+  headings:
+    family: Montserrat
+    weight: 700
+    color: primary
+  monospace: Fira Code
+  link:
+    color: danger
+    decoration: underline
+```
+
+::: notes
+You can then specify how the fonts are applied and styled. The base and headings options control the style for the main text and headings, respectively.
+:::
+
+::: aside
+[brand.yml typography documentation](https://posit-dev.github.io/brand-yml/brand/typography.html)
+:::
+
+## Defaults
+
+```{.yaml}
+defaults:
+  bootstrap:
+    defaults:
+      enable-rounded: false
+      link-decoration: none
+```
+
+::: notes
+These are additional, context-specific settings beyond basic brand colors and typography. For example, they could be options used by Bootstrap in Quarto or Shiny. They might also be integrated into existing Quarto YAML fields like format or website, or added as new fields for other contexts, such as Shiny.
+:::
+
+::: aside
+[brand.yml defaults documentation](https://posit-dev.github.io/brand-yml/brand/defaults.html)
+:::
+
+## brand.yml inspiration
+
+![](images/inspiration.png){fig-align="center" width=80%}
+
+::: aside
+[brand.yml inspiration page](https://posit-dev.github.io/brand-yml/inspiration/)
+:::
+
+::: notes
+The brand.yml inspiration page features examples of companies and their themes. It’s a great resource for inspiration and reference. Plus, the team would love to add your company’s theme to the inspiration page!
+:::
+
+## Let's try it out! {.title background-color="#cbc3e3"}
+
+![](images/rladies-brand.png){fig-align="center" width=60%}
+
+::: aside
+[R-Ladies Organizational Guide - Branding](https://guide.rladies.org/organization/tech/brand/)
+:::
+
+## Creating a brand.yml with an LLM
+
+![](images/llm.png){fig-align="center" width=60%}
+
+::: aside
+[Creating a brand.yml with an LLM](https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/)
+:::
+
+## Creating a brand.yml with an LLM {.smaller}
+
+* Explain brand.yml using the provided Markdown file in either a chat interface or as a system prompt
+* Then, follow up with additional instructions: `Create a _brand.yml for {company} using the following context from {company}'s' brand guidelines`
+* Test it out using the Shiny example app
+
+::: aside
+[Creating a brand.yml with an LLM](https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/)
+:::
+
+::: notes
+ou might be thinking, Extracting color values, fonts, and logos from brand guidelines can be tedious. Thankfully, large language models (LLMs) are great at processing information and can do the hard work for you! Since brand.yml is a relatively new project, LLMs like OpenAI’s ChatGPT, Anthropic’s Claude, and others haven’t fully learned the syntax—yet. However, it’s easy to teach an LLM everything it needs to know about brand.yml. We’ve created a simple markdown file explaining brand.yml that you can copy and paste into a chat interface or use as a system prompt. Just copy the code block below and paste it into a chat interface or system prompt. Then, give it instructions to create the YAML file. There’s also a Shinylive app linked in the article if you want to try it out online.:::
+
+## Using `_brand.yml` values
+
+Beyond the automatic application of your brand file, you can also directly access `_brand.yml` values in Quarto documents via the `brand` shortcode.
+
+```{.md filename="document.qmd"}
+{{{< brand logo LOGO_NAME >}}}
+```
+
+<br>
+
+```{.md filename="document.qmd"}
+`## Slide Title {background-color='{{{< brand color primary >}}}'}`
+```
+
+::: notes
+You can’t currently access typography, meta, or defaults values using the brand shortcode.
+:::
+
+## brand.yml structure (outside of Quarto Projects)
+
+```{.yaml filename="document.qmd"}
+---
+brand:
+  color:
+    background: "#fff"
+---
+```
+
+::: notes
+You can create a _brand.yml file outside of a Quarto project (e.g. without a _quarto.yml). In this case, _brand.yml will automatically apply to documents in the same directory.
+:::
+
+## Disabling brand.yml
+
+Disable brand for a document by setting `brand` to `false`:
+
+```{.yaml filename="document.qmd"}
+---
+brand: false
+---
+```
+
+## Theming priority
+
+Keep in mind that `_brand.yml` always takes *lowest* priority in styles.
+
+```{.yaml}
+theme:
+  - brand        # theming derived from `_brand.yml`
+  - cosmo        # a predefined bootswatch theme
+  - tweaks.scss  # a user-defined customization
+```
+
+::: notes
+Defined themes will override the brand settings. As a result, values set by the brand.yml file can be overridden by themes like cosmo or by tweaks.scss. While this can be useful in some cases, you may often want the brand settings to take priority. For these situations, use the following:
+:::
+
+## Theming priority
+
+Keep in mind that `_brand.yml` always takes *lowest* priority in styles.
+
+```{.yaml}
+theme:
+  - cosmo        # a predefined bootswatch theme
+  - brand        # theming derived from `_brand.yml`
+  - tweaks.scss  # a user-defined customization
+```
+
+## Sharing brand.yml
+
+- Create an extension
+- Create a GitHub repo where it can be downloaded
+
+
+::: aside
+[Quarto extensions documentation](https://quarto.org/docs/extensions/)
+:::
+
+## Future of brand.yml
+
+Join the [discussion](https://github.com/posit-dev/brand-yml/discussions)!
+
+::: notes
+One thing in the works is adding branding support for plots and tables. Since brand.yml is a new project, we’d love your feedback to help shape its future. Some fields may change as we learn what works and what doesn’t.
+:::
+
+##  Thank you! {.title background-color="#cbc3e3"}
+
+[{{< fa brands github >}} ivelasq](https://github.com/ivelasq)
+
+[{{< fa brands bluesky >}} ivelasq3](https://twitter.com/ivelasq3)
+
+[{{< fa brands mastodon >}} ivelasq3](https://fosstodon.org/@ivelasq3)
+
+[{{< fa link >}} ivelasq.rbind.io](https://ivelasq.rbind.io)
