@@ -430,7 +430,7 @@ The brand.yml inspiration page features examples of companies and their themes. 
 
 ## Let's try it out! {.title background-color="#cbc3e3"}
 
-![](images/rladies-brand.png){fig-align="center" width=60%}
+![](images/rladies-brand.png){fig-align="center" width=80%}
 
 ::: aside
 [R-Ladies Organizational Guide - Branding](https://guide.rladies.org/organization/tech/brand/)
@@ -438,7 +438,7 @@ The brand.yml inspiration page features examples of companies and their themes. 
 
 ## Creating a brand.yml with an LLM
 
-![](images/llm.png){fig-align="center" width=60%}
+![](images/llm.png){fig-align="center" width=80%}
 
 ::: aside
 [Creating a brand.yml with an LLM](https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/)
@@ -529,8 +529,7 @@ theme:
 ## Sharing brand.yml
 
 - Create an extension
-- Create a GitHub repo where it can be downloaded
-
+- Upload to a GitHub repo where it can be downloaded
 
 ::: aside
 [Quarto extensions documentation](https://quarto.org/docs/extensions/)
@@ -544,12 +543,13 @@ Join the [discussion](https://github.com/posit-dev/brand-yml/discussions)!
 One thing in the works is adding branding support for plots and tables. Since brand.yml is a new project, we’d love your feedback to help shape its future. Some fields may change as we learn what works and what doesn’t.
 :::
 
-##  Thank you! {.title background-color="#cbc3e3"}
+##  
 
-[{{< fa brands github >}} ivelasq](https://github.com/ivelasq)
-
-[{{< fa brands bluesky >}} ivelasq3](https://twitter.com/ivelasq3)
-
-[{{< fa brands mastodon >}} ivelasq3](https://fosstodon.org/@ivelasq3)
-
-[{{< fa link >}} ivelasq.rbind.io](https://ivelasq.rbind.io)
+<br>
+<br>
+```{=html}
+</style>
+<div id="ransomizer"><div class="ts"><div class="tw"><div class="tc " style="background-color:#f9aa51;color:#000000;font-family:'Germania One', serif; font-size:110%; font-weight:bold; box-shadow:1px -1px 2px #333; text-transform:lowercase; line-height:125%; text-decoration:underline; margin:0.1em; padding:0.1em; vertical-align:0.1em; ">T</div><div class="tc rl" style="background-color:#717732;color:#ffffff;font-family:'Rubik', serif; font-size:110%; font-weight:bold; background-image:url(https://i.imgur.com/pwrAKPo.png) ; background-position: left bottom; font-style:italic; box-shadow:-1px 1px 2px #333; text-transform:lowercase; line-height:75%; margin:0.1em; padding:0.3em; vertical-align:-0.1em; ">h</div><div class="tc rl" style="background-color:#ce1126;color:#ffffff;font-family:'Rubik', serif; font-size:100%; font-weight:bold; box-shadow:1px -1px 2px #333; text-transform:lowercase; line-height:75%; margin:0.1em; padding:0.3em; vertical-align:-0.1em; ">a</div><div class="tc rl" style="background-color:#ce1126;color:#ffffff;font-family:'Crimson Pro', serif; font-size:90%; box-shadow:1px -1px 2px #333; text-transform:lowercase; line-height:125%; margin:0.1em; padding:0.3em; vertical-align:baseline; ">n</div><div class="tc " style="background-color:#717732;color:#ffffff;font-family:'Alfa Slab One', serif; font-size:100%; font-weight:lighter; background-image:url(https://i.imgur.com/IcV8Q3G.png) ; background-position: center top; box-shadow:-1px 1px 2px #333; text-transform:uppercase; line-height:100%; margin:0.1em; padding:0.2em; vertical-align:0.1em; ">k</div></div>
+ <div class="tw"><div class="tc rr" style="background-color:#f8c83c;color:#000000;font-family:'Rubik', serif; font-size:100%; font-style:italic; box-shadow:-1px -1px 2px #333; line-height:100%; margin:0.1em; padding:0.3em; vertical-align:-0.1em; ">y</div><div class="tc " style="background-color:#0c8489;color:#fbffff;font-family:'Alfa Slab One', serif; font-size:110%; font-weight:lighter; background-image:url(https://i.imgur.com/ruhP2kd.png) ; background-position: center top; text-transform:uppercase; line-height:125%; text-decoration:underline; margin:0.1em; padding:0.2em; vertical-align:baseline; ">o</div><div class="tc " style="background-color:#803f1d;color:#ffffff;font-family:'Rubik', serif; font-size:90%; box-shadow:1px 1px 2px #333; text-transform:lowercase; line-height:125%; margin:0.1em; padding:0.3em; vertical-align:0.1em; ">u</div><div class="tc rl" style="background-color:#f8c83c;color:#000000;font-family:'Crimson Pro', serif; font-size:90%; background-image:url(https://i.imgur.com/IcV8Q3G.png) ; background-position: left center; box-shadow:-1px -1px 2px #333; text-transform:uppercase; line-height:100%; margin:0.1em; padding:0.3em; vertical-align:0.1em; ">!</div></div>
+</div></div>
+```
