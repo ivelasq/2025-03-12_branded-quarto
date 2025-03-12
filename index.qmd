@@ -93,7 +93,7 @@ div.ts .rl {
 </center>
 
 ::: notes
-You may notice I'm using the default Quarto theme—that's on purpose! We'll come back to that later. brand.yml's tagline is unified branding with a simple YAML file. The idea is simple: every company has brand guidelines, and brand.yml helps translate them into a YAML file that can style slides, websites, Shiny apps, and more. This approach ensures that branding is consistent across different projects. The goal is to structure the YAML file in a way that makes sense both to those referencing it for brand consistency and to developers using it to theme their work.
+You may notice I'm using the default Quarto theme—that's on purpose! We'll come back to that later.
 :::
 
 ## Background
@@ -101,7 +101,7 @@ You may notice I'm using the default Quarto theme—that's on purpose! We'll com
 ![](images/quarto-announce.png){width=80% fig-align="center"}
 
 ::: notes
-I'm going to start with a very real story.
+I'm going to start with a true story. Quarto is a scientific technical publishing system. But it's not so new anymore, it was announced July 28, 2022 at rstudio conf. If you are here, I hope you have some familiarity with Quarto. Essentially, executable code and text to create a variety of docs (websites, presentations, books) from a single source. It's inherently multilingual, supporting R, Python, Julia, Observable, and designed to handle more in the future. And it aims to have a consistent syntax across tools (vs R Markdown's bookdown, xaringan, etc.). Back to the story, Quarto was announced and not quite two months later...
 :::
 
 ## Background
@@ -112,6 +112,10 @@ I'm going to start with a very real story.
 
 ![](images/fake-text2.png){width=80% fig-align="center"}
 
+::: notes
+Why did this come up? Once the initial excitement of Quarto wears off, you start thinking about how to use it practically.
+:::
+
 ##
 
 ![](images/report-design.png){width=80% fig-align="center"}
@@ -121,7 +125,7 @@ I'm going to start with a very real story.
 :::
 
 ::: notes
-At posit::conf(2024), David Keyes gave a talk about Quarto’s default styles. The defaults work well, but his company focuses on creating reports that are not just functional but also more effective, more accessible by visually appealing.
+I got to hear Garrick Aden-Buie, developer on the Shiny team and one of the creators of brand.yml, talk about the motivation behind brand.yml. I want to mention Garrick is an amazing speaker, his talks are approachable, thoughtful, and insightful. He will be talking about brand.yml at Shiny Conf in April. Shiny Conf is a free and virtual conference hosted by Appsilon. If you have the opportunity, I really encourage you to join and watch Garrick's talk to hear about brand.yml from the eyes of a developer and also to hear how it applies to Shiny, since this talk is mostly about Quarto. Anyway. At posit::conf(2024), David Keyes gave a talk about Quarto’s default styles. The defaults work well, but his company focuses on creating reports that are not just functional but also more effective, more accessible by visually appealing.
 :::
 
 ## {.title background-gradient="linear-gradient(to bottom, #DFB12F, #805280)"}
@@ -152,6 +156,10 @@ At RStudio::conf(2019), Heather and Jacqueline Nolis gave a talk about prototypi
 
 ![](images/data-viz.png){width=80% fig-align="center"}
 
+::: notes
+This isn’t a new idea—it's why marketing teams invest time and resources into developing brand guidelines. But branding isn’t just for marketers; developers also need to consider it to make their work more effective and engaging. Take data visualizations, for example. When you see a certain style, you instantly recognize it as The Economist’s. Their design is so distinct and standardized that it even has its own ggplot2 theme.
+:::
+
 . . .
 
 ```r
@@ -170,9 +178,6 @@ ggplot(mtcars) +
 [Source](https://medium.economist.com/charting-new-territory-7f5afb293270)
 :::
 
-::: notes
-This isn’t a new idea—it's why marketing teams invest time and resources into developing brand guidelines. But branding isn’t just for marketers; developers also need to consider it to make their work more effective and engaging. Take data visualizations, for example. When you see a certain style, you instantly recognize it as The Economist’s. Their design is so distinct and standardized that it even has its own ggplot2 theme.
-:::
 
 ## Challenges with branding
 
@@ -206,13 +211,17 @@ That’s why the release of brand.yml was so exciting—it provided another opti
 [posit-dev.github.io/brand-yml](https://posit-dev.github.io/brand-yml)
 :::
 
+::: notes
+brand.yml's tagline is unified branding with a simple YAML file. The idea is simple: every company has brand guidelines, and brand.yml helps translate them into a YAML file that can style slides, websites, Shiny apps, and more. This approach ensures that branding is consistent across different projects. The goal is to structure the YAML file in a way that makes sense both to those referencing it for brand consistency and to developers using it to theme their work.
+:::
+
 ## brand.yml
 
 1. Define branding in a single `_brand.yml` file.
 2. Instantly apply branding across Quarto documents, Shiny apps, and more.
 
 ::: notes
-You create a single YAML file that Quarto and Shiny will pick up, ensuring consistent branding across your outputs. The idea is to take your brand guidelines and translate them into structured YAML. You don't HAVE to use different systems to change the appearance of your documents Do you need CSS? Will you need to learn bslib? Maybe. brand.yml offers "Good Enough" theming. It might not match your company’s guidelines perfectly, but it will get you very close. To specify a brand, simply create a _brand.yml file in the root directory of your project (next to _quarto.yml). Quarto will automatically detect the _brand.yml file and apply the branding to all supported document formats in the project. Another advantage is that you can use brand.yml in conjunction with other files, like you need additional tweaking with CSS.
+The idea is to take your brand guidelines and translate them into structured YAML.You create a single, structured YAML file that Quarto and Shiny will pick up, ensuring consistent branding across your outputs. You don't HAVE to use different systems to change the appearance of your documents. Do you need CSS? Will you need to learn bslib? Maybe. brand.yml offers "Good Enough" theming. It might not match your company’s guidelines perfectly, but it will get you very close. To specify a brand, create a _brand.yml file in the root directory of your project (next to _quarto.yml). Quarto will automatically detect the _brand.yml file and apply the branding to all supported document formats in the project. Another advantage is that you can use brand.yml in conjunction with other theming files, like you need additional tweaking with CSS.
 :::
 
 ## Where does it work?
@@ -222,6 +231,11 @@ You create a single YAML file that Quarto and Shiny will pick up, ensuring consi
 * [Shiny for Python](https://shiny.posit.co/py/) v1.2
 * R Markdown (with [bslib v0.9.0](https://shiny.posit.co/blog/posts/bslib-0.9.0/))
 * Shiny for R (with [bslib v0.9.0](https://shiny.posit.co/blog/posts/bslib-0.9.0/))
+
+
+::: aside
+[Support documentation](https://posit-dev.github.io/brand-yml/#support)
+:::
 
 ## brand.yml elements
 
@@ -279,6 +293,8 @@ typography:
 You might be wondering, What is YAML? YAML stands for "YAML Ain't Markup Language." It's a simple data serialization format that uses key-value pairs to represent data in a readable way. Let’s take a look at a file—the _brand.yml file. This would be in your project and typically include the elements mentioned earlier. Everything is optional, so you can add as much or as little as needed. Whether you want a simple or more complex file, it's all up to you.
 :::
 
+# Metadata {.title background-color="#cbc3e3"}
+
 ## Metadata {auto-animate=true}
 
 ```{.yaml}
@@ -315,7 +331,7 @@ You can also include a range of names or social media handles.
 
 ## Metadata {auto-animate=true}
 
-```{.yaml code-line-numbers="|2,3,4"}
+```{.yaml code-line-numbers="5-12|2,3,4"}
 meta:
   name:
     full: Acme Corporation International
@@ -337,6 +353,8 @@ meta:
 ::: aside
 [brand.yml metadata documentation](https://posit-dev.github.io/brand-yml/brand/meta.html)
 :::
+
+# Logo {.title background-color="#cbc3e3"}
 
 ## Logo {auto-animate=true}
 
@@ -369,10 +387,7 @@ logo:
 The small attribute defines the logo used for small display contexts, such as favicons or mobile app icons. The medium attribute specifies the logo for medium-sized display contexts, typically used in website headers or navigation bars. The large attribute defines the logo for large display contexts, such as title slides or marketing materials.
 :::
 
-
 ## Logo {auto-animate=true}
-
-### Light/dark variants
 
 ```{.yaml code-line-numbers="|4|5"}
 logo:
@@ -393,9 +408,7 @@ You can specify different logos for light and dark backgrounds by giving the sma
 
 ## Logo {auto-animate=true}
 
-### Configuration with Named Resources
-
-```{.yaml}
+```{.yaml code-line-numbers="|4,9"}
 logo:
   images:
     icon: logos/icon.png
@@ -419,9 +432,7 @@ Use images as a nested mapping to define multiple logo resources with meaningful
 
 ## Logo {auto-animate=true}
 
-### With alternative text
-
-```{.yaml}
+```{.yaml code-line-numbers="|5,8,11,14"}
 logo:
   images:
     icon:
@@ -450,6 +461,8 @@ logo:
 ::: notes
 Logo images can have associated alternative text for accessibility purposes. This can be specified as an alt property in the image object as the alt text is directly associated with each image.
 :::
+
+# Colors {.title background-color="#cbc3e3"}
 
 ## Colors {auto-animate=true}
 
@@ -556,6 +569,8 @@ color:
 ::: notes
 Of course, you can also skip creating a brand color palette and pick theme colors directly.
 :::
+
+# Typography {.title background-color="#cbc3e3"}
 
 ## Typography {auto-animate=true}
 
@@ -708,6 +723,8 @@ You can then specify how the fonts are applied and styled.
 [brand.yml typography documentation](https://posit-dev.github.io/brand-yml/brand/typography.html)
 :::
 
+# Defaults {.title background-color="#cbc3e3"}
+
 ## Defaults
 
 ```{.yaml}
@@ -754,6 +771,10 @@ The brand.yml inspiration page features examples of companies and their themes. 
 [Creating a brand.yml with an LLM](https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/)
 :::
 
+::: notes
+ou might be thinking, Extracting color values, fonts, and logos from brand guidelines can be tedious. Thankfully, large language models (LLMs) are great at processing information and can do the hard work for you!
+:::
+
 ## Creating a brand.yml with an LLM {.smaller}
 
 * Explain brand.yml using the provided Markdown file in either a chat interface or as a system prompt
@@ -765,8 +786,9 @@ The brand.yml inspiration page features examples of companies and their themes. 
 :::
 
 ::: notes
-ou might be thinking, Extracting color values, fonts, and logos from brand guidelines can be tedious. Thankfully, large language models (LLMs) are great at processing information and can do the hard work for you! Since brand.yml is a relatively new project, LLMs like OpenAI’s ChatGPT, Anthropic’s Claude, and others haven’t fully learned the syntax—yet. However, it’s easy to teach an LLM everything it needs to know about brand.yml. We’ve created a simple markdown file explaining brand.yml that you can copy and paste into a chat interface or use as a system prompt. Just copy the code block below and paste it into a chat interface or system prompt. Then, give it instructions to create the YAML file. There’s also a Shinylive app linked in the article if you want to try it out online.
+Since brand.yml is a relatively new project, LLMs like OpenAI’s ChatGPT, Anthropic’s Claude, and others haven’t fully learned the syntax—yet. However, it’s easy to teach an LLM everything it needs to know about brand.yml. We’ve created a simple markdown file explaining brand.yml that you can copy and paste into a chat interface or use as a system prompt. Just copy the code block below and paste it into a chat interface or system prompt. Then, give it instructions to create the YAML file. There’s also a Shinylive app linked in the article if you want to try it out online.
 :::
+
 
 ## Using `_brand.yml` values
 
