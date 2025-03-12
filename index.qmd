@@ -15,6 +15,7 @@ format:
         </style>
     filters:
       - fontawesome
+    footer: "ivelasq-branded-quarto.share.connect.posit.cloud/"
 editor: source
 highlight-style: a11y
 brand: false
@@ -454,7 +455,8 @@ The brand.yml inspiration page features examples of companies and their themes. 
 :::
 
 ::: notes
-ou might be thinking, Extracting color values, fonts, and logos from brand guidelines can be tedious. Thankfully, large language models (LLMs) are great at processing information and can do the hard work for you! Since brand.yml is a relatively new project, LLMs like OpenAI’s ChatGPT, Anthropic’s Claude, and others haven’t fully learned the syntax—yet. However, it’s easy to teach an LLM everything it needs to know about brand.yml. We’ve created a simple markdown file explaining brand.yml that you can copy and paste into a chat interface or use as a system prompt. Just copy the code block below and paste it into a chat interface or system prompt. Then, give it instructions to create the YAML file. There’s also a Shinylive app linked in the article if you want to try it out online.:::
+ou might be thinking, Extracting color values, fonts, and logos from brand guidelines can be tedious. Thankfully, large language models (LLMs) are great at processing information and can do the hard work for you! Since brand.yml is a relatively new project, LLMs like OpenAI’s ChatGPT, Anthropic’s Claude, and others haven’t fully learned the syntax—yet. However, it’s easy to teach an LLM everything it needs to know about brand.yml. We’ve created a simple markdown file explaining brand.yml that you can copy and paste into a chat interface or use as a system prompt. Just copy the code block below and paste it into a chat interface or system prompt. Then, give it instructions to create the YAML file. There’s also a Shinylive app linked in the article if you want to try it out online.
+:::
 
 ## Using `_brand.yml` values
 
