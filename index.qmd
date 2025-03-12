@@ -567,7 +567,7 @@ typography:
 ```
 
 ::: notes
-The typography element lets you specify fonts and their styles. Use the fonts field to list the fonts for your brand—this can be simple or more detailed. First, specify the fonts used by your brand. You can then refer to these fonts by family in other typography options and define the fonts and styles used by different typographic elements. You can use fonts from public sources like Google Fonts, or list custom font files using a relative path or URL. One thoughtful feature: Google Fonts can add tracking, but there’s a GDPR-compliant alternative, Bunny Fonts, if you prefer that. At its most minimal, you can directly set the font families for base text, headings, and monospace text.
+The typography element lets you specify fonts and their styles. Use the fonts field to list the fonts for your brand—this can be simple or more detailed. First, specify the fonts used by your brand. You can then refer to these fonts by family in other typography options and define the fonts and styles used by different typographic elements. You can use fonts from public sources like Google Fonts, or list custom font files using a relative path or URL. At its most minimal, you can directly set the font families for base text, headings, and monospace text.
 :::
 
 ::: aside
@@ -612,7 +612,7 @@ typography:
 :::
 
 ::: notes
-Currently, Quarto and Shiny assume that a font family mentioned in the typography section is available on the user’s system. To use fonts from Google Fonts or Bunny Fonts (a GDPR-compliant Google Fonts replacement), define the font sources in fonts. 
+Currently, Quarto and Shiny assume that a font family mentioned in the typography section is available on the user’s system. To use fonts from Google Fonts or Bunny Fonts (a GDPR-compliant Google Fonts replacement), define the font sources in fonts.
 :::
 
 ## Typography {auto-animate=true}
@@ -869,7 +869,7 @@ theme:
 
 ## Summary
 
-brand.yml allows you to collect a brand’s logos, colors, fonts, and typographic choices into a single _brand.yml file, which you can then apply instantly across Quarto reports, Shiny apps, and more.
+brand.yml allows you to collect a brand’s logos, colors, fonts, and typographic choices into a single `_brand.yml` file, which you can then apply instantly across Quarto reports, Shiny apps, and more.
 
 - Consistency without effort
 - Easy collaboration
