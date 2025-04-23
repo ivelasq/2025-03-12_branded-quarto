@@ -4,6 +4,7 @@
 
 ![](images/title.png)
 
+[Link to recording](https://www.youtube.com/watch?v=mTuhQ64P3qc)
 [Link to slides](https://ivelasq-branded-quarto.share.connect.posit.cloud/#/section)
 
 ## Resources
