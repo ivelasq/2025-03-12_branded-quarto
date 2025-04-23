@@ -1,10 +1,11 @@
-# Brand your Quarto Projects with brand.yml
+ # Brand your Quarto Projects with brand.yml
 
 ## 2025-03-12 R-Ladies Philly
 
 ![](images/title.png)
 
 [Link to recording](https://www.youtube.com/watch?v=mTuhQ64P3qc)
+
 [Link to slides](https://ivelasq-branded-quarto.share.connect.posit.cloud/#/section)
 
 ## Resources
